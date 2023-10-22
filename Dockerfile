@@ -20,7 +20,7 @@ EXPOSE 161 161/udp
 
 RUN apk add --update --no-cache linux-headers alpine-sdk curl findutils sed && \
   mkdir -p /etc/snmp && \
-  curl -L "https://sourceforge.net/projects/net-snmp/files/5.4.5-pre-releases/net-snmp-5.4.5.rc1.tar.gz/download" -o net-snmp.tgz && \
+  curl -L "https://sourceforge.net/projects/net-snmp/files/5.9.4/net-snmp-5.9.4.tar.gz/download" -o net-snmp.tgz && \
   tar zxvf net-snmp.tgz && \
   cd net-snmp-* && \
   find . -type f -print0 | xargs -0 sed -i 's/\"\/proc/\"\/host_proc/g' && \
